@@ -1,7 +1,18 @@
 import sqlite3
 
-sqliteConnection = sqlite3.connect('sql.db')
+sqliteConnection = sqlite3.connect('twist.sqlite')
 cursor = sqliteConnection.cursor()
-login = input("input login")
-query = 'select login, password FROM table WHERE login == ' + login + ';'
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER,
+            login VARCHAR,
+            password VARCHAR
+);        ''')
+sqliteConnection.commit()
+
+login = input("input login ")
+query = "select login, password FROM users WHERE login ==  '" + login + "';"
+print(query)
 cursor.execute(query)
+result = cursor.fetchall()
+print(result)
