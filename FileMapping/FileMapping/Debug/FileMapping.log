@@ -1,0 +1,4 @@
+﻿  MainS.cpp
+C:\Users\ТС\Source\Repos\FileMapping\FileMapping\MainS.cpp(110,53): warning C4474: "sprintf" : для строки формата передано слишком много аргументов
+C:\Users\ТС\Source\Repos\FileMapping\FileMapping\MainS.cpp(110,53): message : заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 2
+  FileMapping.vcxproj -> C:\Users\ТС\Source\Repos\FileMapping\Debug\Server.exe
